@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 #include "sys_info.h"
-
+#include "pid_parser.h"
 
 
 int main() {
@@ -20,4 +20,11 @@ int main() {
 
   printf("\n%f\n\n", version);
   //free(version);
+  
+
+  //-----pid_parser tests-----
+  printf("Start of pid_parser tests\n");
+  char * buf[50];
+  *buf = get_name(197020);
+  printf("%s\n", *buf);
 }
